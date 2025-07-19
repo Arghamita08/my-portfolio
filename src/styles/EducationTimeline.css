@@ -1,0 +1,49 @@
+.timeline-container {
+  position: relative;
+  height: 260px;
+  padding-left: 120px;
+}
+
+.vertical-line {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 5px;
+  height: 0;
+  background-color: navy;
+  border-radius: 4px;
+}
+
+.timeline-container.start .vertical-line {
+  animation: growLine 2s ease-out forwards;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 110px;
+  }
+}
+
+.timeline-item {
+  position: absolute;
+  left: 7.5px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: -45px;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.timeline-label {
+  font-size: 14px;
+  color: black;
+}

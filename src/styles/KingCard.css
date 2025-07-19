@@ -1,0 +1,258 @@
+.king-card-container { 
+    width: 200px; 
+    height: 300px; 
+    perspective: 1000px; 
+    margin: 10px; 
+    cursor: pointer;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #555;
+}
+
+.king-card-inner { 
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.king-card-container.flipped .king-card-inner { 
+    transform: rotateY(180deg);
+}
+
+.king-card-front, 
+.king-card-back { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #555; 
+    box-sizing: border-box; 
+}
+
+.king-card-front { 
+    background-color: #fff; 
+}
+
+.king-card-back { 
+    background-color: white; 
+    transform: rotateY(180deg); 
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.king-card-design { 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; 
+}
+
+.king-card-design::before { 
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px dashed #ddd; 
+    border-radius: 10px;
+}
+
+.rank {
+    position: absolute;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff0000; 
+    z-index: 2;
+}
+
+.top-left {
+    top: 10px;
+    left: 15px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 15px;
+    transform: rotate(180deg); 
+}
+
+.suit {
+    position: absolute;
+    font-size: 2em; 
+    color: #ff0000; 
+    z-index: 2;
+}
+
+.suit.top-left {
+    top: 60px;
+    left: 25px;
+}
+
+.suit.bottom-right {
+    bottom: 60px; 
+    right: 25px;
+    transform: rotate(180deg); 
+}
+
+.king-face-image { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    max-width: 80%; 
+    max-height: 70%; 
+    object-fit: contain; 
+    border-radius: 5px; 
+}
+
+.resume-link-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.resume-button {
+  display: inline-block;
+  background-color: #4b0082; 
+  color: white;
+  padding: 10px 18px;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #6a0dad; 
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 10px 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  gap: 12px;
+}
+
+.form-group:focus-within {
+  border-color: #6a0dad; 
+}
+
+.form-group .icon {
+  font-size: 1.2rem;
+  color: #6a0dad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 6px 8px;
+}
+
+input {
+  margin-left: -50px;
+  min-width: 90px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+  margin-left: -10px;
+}
+
+.codeforces {
+  color: green;
+  text-decoration: none;
+}
+
+.codechef {
+  color: #ffa116;
+  text-decoration: none;
+}
+
+.social {
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.social:hover {
+  color: blue;
+}
+
+.star {
+  display: inline-block;
+  animation: pulse 1.2s infinite ease-in-out;
+  font-size: 1.2em;
+  margin-left: 2px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+}
+
+.contact-me input{
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid purple;
+    margin-top: -5px;
+}
+
+.contact-me textarea{
+    margin-bottom: 2px;
+    margin-top: -5px;
+    border-radius: 5px;
+    border: 2px solid orangered;
+}
