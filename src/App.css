@@ -129,6 +129,13 @@ button:hover {
   }
 }
 
+@media (max-width: 415px) {
+  .animated-line {
+    font-size: 0.75em;
+    padding: 0 10px;
+  }
+}
+
 .portfolio-container.dark-mode button {
   background-color: #555;
   color: #eee;
