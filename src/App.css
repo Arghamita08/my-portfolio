@@ -78,32 +78,55 @@ button:hover {
 }
 
 .animated-gradient-heading {
-  font-size: 2.7em; 
-  font-weight: 450;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-bottom: 20px;
-  display: flex; 
+  margin-bottom: 10px;
+  max-width: 90vw;
+}
+
+.animated-line {
+  font-size: 2.1em;
+  font-weight: 500;
+  margin: 0.3em 0;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
-  line-height: 1.2;
+  justify-content: center;
+  line-height: 1.25;
 }
 
 .animated-gradient-heading span {
-  display: inline-block; 
-  background: linear-gradient(90deg, red, blue, green); 
-  -webkit-background-clip: text; 
-  background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  text-fill-color: transparent;
-  padding: 0 1px; 
-}
-
-.portfolio-container.dark-mode .animated-gradient-heading span {
-  background: linear-gradient(90deg, red, violet, white);
+  display: inline-block;
+  background: linear-gradient(90deg, red, blue, green);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+  padding: 0 1px;
+}
+
+.portfolio-container.dark-mode .animated-gradient-heading span {
+  background: linear-gradient(90deg, red, violet, white);
+}
+
+@media (max-width: 1030px) {
+  .animated-line {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 770px) {
+  .animated-line {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-line {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
 }
 
 .portfolio-container.dark-mode button {
@@ -127,7 +150,7 @@ button:hover {
 }
 
 .filter-controls button.active-filter {
-    background: linear-gradient(45deg, red, yellow); /* Example active gradient */
+    background: linear-gradient(45deg, red, yellow);
     color: white;
     font-weight: bold;
     border: 1px solid #0056b3;
