@@ -71,7 +71,7 @@ const KingCard = ({ isFlipped, info = {}, contentType = '' }) => {
     <div className="resume-section">
       <h3>📄 My Resume</h3>
       <a
-        href="Arghamita.pdf" // replace with your actual resume link
+        href="Arghamita.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-button"
